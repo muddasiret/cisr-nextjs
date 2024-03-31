@@ -3,7 +3,7 @@ import { MOB_LINKS, NAV_LINKS } from "./constants";
 import Link from "next/link";
 import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
-// import Accordion from "../../pages/about/accordion/accordion";
+import Image from "next/image";
 
 const Header = () => {
   const logo = "/images/chair logon updated.png";
@@ -15,31 +15,37 @@ const Header = () => {
       <div className="flex header-main justify-between mx-auto flex-row items-center	py-5 px-5 md:px-10 bg-brown">
         <div>
           <Link href="/">
-            <img
+            <Image
               src={logo}
+              width={80}
+              height={48}
               className="w-auto h-12 cursor-pointer"
               alt="logo_university"
             />
           </Link>
         </div>
         <div className="md:hidden flex">
-          <img
+          <Image
             src={"/images/search.png"}
             width={35}
+            height={48}
             role="button"
             className="mr-4"
             onClick={() => {
               setSearchOpen(true);
               setHamburgerActive(true);
             }}
+            alt="icon"
           />
-          <img
+          <Image
             src={"/images/menu.png"}
             width={35}
+            height={48}
             role="button"
             onClick={() => {
               setHamburgerActive(true);
             }}
+            alt="icon"
           />
         </div>
         <nav className="hidden sm:flex sm:justify-center space-x-4 items-center">
@@ -50,12 +56,12 @@ const Header = () => {
             >
               <Link
                 href={NAV_LINKS[key].link}
-                className="uppercase rounded-lg px-3 py-2 font-medium text-white hover:bg-slate-100 hover:text-slate-900 group relative"
+                className="uppercase rounded-sm px-1 py-1 font-medium text-white hover:bg-slate-100 hover:text-slate-900 group relative"
               >
                 {NAV_LINKS[key].label}
               </Link>
               {NAV_LINKS[key].sub && (
-                <div className="absolute z-1 min-w-max bg-grey-200 hidden group-hover:block right-0 top-6">
+                <div className="absolute z-1 min-w-max bg-grey-200 hidden group-hover:block right-0 top-7">
                   <div className="bg-cream shadow-lg">
                     <div className="uppercase cursor-pointer flex-col flex">
                       {Object.keys(NAV_LINKS[key].sub).map(

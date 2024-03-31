@@ -26,8 +26,7 @@ const EventCard = ({ data }) => {
             <div className="flex">
               <div className="text-xs text-white bg-blue-600/[.4] px-2 py-2 w-6/12 flex items-center">
                 <BiTime color="white" className="mr-1" />
-                <div>{date}</div>
-                {/* <Moment format="MMM Do YYYY">{date}</Moment> */}
+                <Moment format="MMM Do YYYY">{date}</Moment>
                 <span className="ml-3">{time}</span>
               </div>
               {today < eventdate && (

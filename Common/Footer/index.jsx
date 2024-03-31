@@ -33,28 +33,31 @@ const Footer = ({ footer_address_email_phone, footer_sub }) => {
                 dangerouslySetInnerHTML={{ __html: footer_address_email_phone }}
               />
             </div>
-            {/* <p className="text-white text-base">
-              Islamic University | Registered UK Charity No. 1137219
+            <p className="text-white text-base">
+              Chair for Islamic Studies and Research
             </p>
+            <p className="text-white text-base">University of Calicut</p>
             <br />
-            <p className="text-white text-base">14 St Paul’s Road</p>
+            <p className="text-white text-base">Calicut University P.O</p>
             <p className="text-white text-base">
               Phone:{" "}
               <a className="text-yellow-500" href="tel:+4733378901">
-                4733378901
+                04942400248
               </a>
             </p>
             <p className="text-white text-base">
               Email:{" "}
               <a className="text-yellow-500" href="mailto:someone@example.com">
-                someone@example.com
+                info@cisr.in{" "}
               </a>
-            </p> */}
+            </p>
           </div>
         </div>
         <div className="bg-cream">
           <div className="md:flex justify-between pb-16 pt-7 md:py-7 px-10 h-10 items-center container mx-auto">
-            <p className="text-white text-xs">{footer_sub}</p>
+            <p className="text-white text-xs">
+              Chair For Islamic Studies & Research | University of Calicut
+            </p>
             <div className="flex md:justify-end justify-center items-center my-3">
               <a className="px-3" href="www.facebook.com" target="_blank">
                 <FiMail color="white" />

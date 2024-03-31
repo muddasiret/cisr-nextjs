@@ -2,10 +2,8 @@ import Link from "next/link";
 import React from "react";
 
 const ProjectCard = ({ details }) => {
-  const { title, slug, image, short_description } = details.attributes;
-  const thumb = image.data
-    ? image.data.attributes.url
-    : "/images/placeholder.png";
+  const { title, slug, image, short_description } = details;
+  const thumb = image ? image : "/images/placeholder.png";
 
   return (
     <Link href={"/projects/" + slug}>

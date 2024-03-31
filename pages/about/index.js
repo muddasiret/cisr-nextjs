@@ -5,7 +5,7 @@ import PageTitle from "../../components/pageTitle";
 import { fetchAPI } from "../../lib/api";
 import Contact from "../../components/contact";
 import { getTitleImage } from "../../utils/getTitleImage";
-import Accordion from "./accordion/accordion";
+import Accordion from "@/components/accordion";
 
 const About = ({ about, visionmission }) => {
   const { title, subtitle, body, youtube_link, email, telephone } = about;
